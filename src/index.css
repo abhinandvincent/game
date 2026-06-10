@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-headline: "Montserrat", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-surface-dim: #0b1326;
+  --color-surface-bright: #31394d;
+  --color-surface-container-lowest: #060e20;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container: #171f33;
+  --color-surface-container-high: #222a3d;
+  --color-surface-container-highest: #2d3449;
+  --color-on-surface: #dae2fd;
+  --color-on-surface-variant: #cbc3d7;
+  --color-outline: #958ea0;
+  --color-outline-variant: #494454;
+
+  --color-primary: #d0bcff;
+  --color-on-primary: #3c0091;
+  --color-secondary: #4cd7f6;
+  --color-on-secondary: #003640;
+  --color-tertiary: #ffb2b7;
+  --color-tertiary-container: #ff516a;
+}
+
+/* Custom styled scrollbars & glassmorphism utilities */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(19, 27, 46, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 25px rgba(208, 188, 255, 0.18);
+  border-color: rgba(208, 188, 255, 0.35);
+}
+
+.accent-glow {
+  box-shadow: 0 0 25px rgba(208, 188, 255, 0.15);
+}
+
+.cyan-glow:hover {
+  box-shadow: 0 0 20px rgba(76, 215, 246, 0.3);
+}
+
+/* Custom Scrollbar for list scroll */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(208, 188, 255, 0.25);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(208, 188, 255, 0.45);
+}
+
+/* Hide scrollbar defaults */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Base styles adaptation */
+body {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, .brand-font {
+  font-family: var(--font-headline);
+}
+
+.mono-font {
+  font-family: var(--font-mono);
+}

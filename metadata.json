@@ -1,0 +1,6 @@
+{
+  "name": "QuestLog",
+  "description": "Your ultimate video game library, backlog manager, search vault, and gaming journal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
